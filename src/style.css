@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');     
+        
+/* Добавьте плавную прокрутку для всего сайта */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    /*margin: 0;
+    padding: 0;
+/*background-color: white /*Sienna;
+color: black;*/
+}
+
+/* <weight>: Use a value from 100 to 900 */
+/* <width>: Use a value from 75 to 100 */
+/* <uniquifier>: Use a unique and descriptive class name */
+
+.roboto-font {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.navbar {
+    background: white;
+    color: sienna;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    padding: 0px 20px;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: sienna;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(160, 82, 45, 0.1);
+    border-bottom: 3px solid sienna;
+    opacity: 1;
+}
+
+.navbar ul li a:active {
+    background-color: rgba(160, 82, 45, 0.2);
+    transform: translateY(1px);
+}
+
+/* Добавьте отступ для якорных ссылок, чтобы контент не скрывался под фиксированным меню */
+.info,
+.card {
+    scroll-margin-top: 80px; /* Высота меню + отступ */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    .navbar ul li {
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(160, 82, 45, 0.1);
+    }
+    
+    .navbar ul li:last-child {
+        border-bottom: none;
+    }
+    
+    .navbar ul li a {
+        padding: 12px 20px;
+        border-bottom: none;
+    }
+    
+    .navbar ul li a:hover {
+        border-bottom: none;
+        background-color: rgba(160, 82, 45, 0.15);
+    }
+    
+    /* Меньший отступ для мобильных */
+    .info,
+    .card {
+        scroll-margin-top: 60px;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: white;
+    color: #0f141e;
+    margin-bottom: 10px;
+}
+
+.info {
+    padding: 20px 20px 20px 20px;
+    margin: 20px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+    align-items: start;
+}
+
+.info-text {
+    grid-column: 1;
+}
+
+.info-image {
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.info-text h1 {
+    color: Sienna;
+    font-size: 28px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.info-text p {
+    font-style: italic;
+    color: DimGrey;
+    max-width: 100%;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.info-text h4 {
+    margin-bottom: 10px;
+    color: #0f141e;
+}
+
+.info-text a {
+    color: Sienna;
+    text-decoration: none;
+}
+
+.info-text a:hover {
+    text-decoration: underline;
+}
+
+.info-text a:active {
+    color:blue;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 20px;
+    }
+    
+    .info-image {
+        grid-column: 1;
+        grid-row: 1; /* Картинка становится первой (сверху) */
+        justify-content: center;
+    }
+    
+    .info-text {
+        grid-column: 1;
+        grid-row: 2; /* Текст становится вторым (снизу) */
+    }
+    
+    .info-image img {
+        width: 200px;
+    }
+}
+/* Гриды закончились */
+
+.container {
+    max-width: 100%;
+    margin: auto;
+    
+}
+
+.card{
+    background: Sienna;
+    color: white;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px 20px 20px 20px;
+    margin: 30px;
+}
+
+.table {
+    width:100%;
+}
+
+.card2 {
+    background: white;
+    color: sienna;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    padding: 0px 20px 20px 20px;
+    margin: 30px; /* Добавлено для единообразия с другими карточками */
+    border: 2px solid Sienna; /* Добавлено для визуального выделения */
+}
+
+.card2 form {
+    width: 100%;
+}
+
+.card2 input,
+.card2 textarea {
+    width: 100%; /* Изменено с 98% на 100% */
+    box-sizing: border-box; /* Важно: учитывает padding и border в ширине */
+    padding: 8px;
+    border: 2px solid Sienna;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px; /* Добавлено для отступов между полями */
+}
+
+.card2 label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: Sienna;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
